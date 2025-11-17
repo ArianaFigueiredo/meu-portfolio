@@ -2,8 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Customizações adicionais */
+body {
+  @apply bg-slate-900 text-white font-sans;
 }
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botões principais */
+button {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Efeitos hover cards de serviços */
+section#servicos div:hover {
+  @apply transform scale-105 shadow-xl;
+}
+
+/* Cards como Diferenciais e Como Funciona */
+section div.bg-purple-700\/30:hover {
+  @apply transform scale-105 shadow-lg;
+}
+
+/* Inputs e Textarea */
+input, textarea {
+  @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+}
+
+/* Hero */
+section.container h2 span {
+  @apply text-purple-400;
+}
+
+/* Footer */
+footer {
+  @apply text-gray-400 text-sm;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  section#servicos .grid {
+    @apply grid-cols-1 gap-8;
+  }
+
+  section#como-funciona .grid {
+    @apply grid-cols-1 gap-10;
+  }
+
+  section.diferenciais .grid {
+    @apply grid-cols-1 gap-10;
+  }
+
+  h2.text-5xl {
+    @apply text-4xl;
+  }
+}
+
+/* Pequenas animações */
+button:hover {
+  @apply shadow-lg scale-105;
+}
+
